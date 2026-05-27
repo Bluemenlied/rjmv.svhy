@@ -3,21 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="siteTitle">Youth Organization - Official Website</title>
-    <meta name="description" content="Official website of the Youth Organization - Building tomorrow's leaders today">
-    <meta name="keywords" content="youth organization, community service, leadership development">
+    <title id="siteTitle">Youth Organization</title>
+    <meta name="description" content="Official website of the Youth Organization">
     
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html" id="siteBrand">Youth Organization</a>
@@ -26,7 +20,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="officers.html">Officers</a></li>
                     <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
@@ -37,105 +31,82 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container text-center">
-            <h1 class="display-3 fw-bold mb-4 animate-on-scroll" id="heroTitle">Welcome to Our Organization</h1>
-            <p class="lead mb-4 animate-on-scroll" style="max-width: 700px; margin: 0 auto;">Building tomorrow's leaders today through service, leadership development, and community excellence.</p>
-            <div class="animate-on-scroll">
-                <a href="about.html" class="btn btn-light btn-lg me-3">Learn More</a>
-                <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Us</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="container py-5">
-        <div class="row text-center">
-            <div class="col-md-3 col-6 mb-4 animate-on-scroll">
-                <div class="display-4 fw-bold text-success" id="officerCount">0</div>
-                <div class="text-muted">Active Officers</div>
-            </div>
-            <div class="col-md-3 col-6 mb-4 animate-on-scroll">
-                <div class="display-4 fw-bold text-success" id="eventCount">0</div>
-                <div class="text-muted">Upcoming Events</div>
-            </div>
-            <div class="col-md-3 col-6 mb-4 animate-on-scroll">
-                <div class="display-4 fw-bold text-success" id="accomplishmentCount">0</div>
-                <div class="text-muted">Accomplishments</div>
-            </div>
-            <div class="col-md-3 col-6 mb-4 animate-on-scroll">
-                <div class="display-4 fw-bold text-success">5+</div>
-                <div class="text-muted">Years Active</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="bg-light py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 animate-on-scroll">
-                    <h2 class="mb-3" id="aboutTitle">About Our Organization</h2>
-                    <div class="divider" style="width: 50px; height: 3px; background: var(--primary); margin-bottom: 20px;"></div>
-                    <p id="aboutText">Loading...</p>
-                    <a href="about.html" class="btn btn-outline-primary mt-3">Read More</a>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container text-center">
+                <h1 class="display-3 fw-bold mb-4" id="heroTitle">Welcome to Our Organization</h1>
+                <p class="lead mb-4" id="heroText">Building tomorrow's leaders today through service, leadership development, and community excellence.</p>
+                <div>
+                    <a href="about.html" class="btn btn-light btn-lg me-3">Learn More</a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Us</a>
                 </div>
-                <div class="col-md-6 animate-on-scroll">
-                    <div class="bg-white rounded p-4 shadow-sm">
-                        <h4>Our Mission</h4>
-                        <p id="missionText">Loading...</p>
-                        <h4 class="mt-4">Our Vision</h4>
-                        <p id="visionText">Loading...</p>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="container py-5">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="display-4 fw-bold text-success" id="officerCount">0</div>
+                    <div class="text-muted">Active Officers</div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="display-4 fw-bold text-success" id="eventCount">0</div>
+                    <div class="text-muted">Upcoming Events</div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="display-4 fw-bold text-success" id="accomplishmentCount">0</div>
+                    <div class="text-muted">Accomplishments</div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="display-4 fw-bold text-success">5+</div>
+                    <div class="text-muted">Years Active</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="bg-light py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="mb-3" id="aboutTitle">About Our Organization</h2>
+                        <div class="divider" style="width: 50px; height: 3px; background: var(--primary); margin-bottom: 20px;"></div>
+                        <p id="aboutText">Loading...</p>
+                        <a href="about.html" class="btn btn-outline-primary mt-3">Read More</a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="bg-white rounded p-4 shadow-sm">
+                            <h4>Our Mission</h4>
+                            <p id="missionText">Loading...</p>
+                            <h4 class="mt-4">Our Vision</h4>
+                            <p id="visionText">Loading...</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Officers Section -->
-    <section class="container py-5">
-        <div class="section-title">
-            <h2>Our Leadership</h2>
-            <div class="divider"></div>
-            <p class="text-muted mt-3">Meet the dedicated team leading our organization</p>
-        </div>
-        <div class="row" id="officersContainer">
-            <!-- Officers will be loaded here -->
-        </div>
-        <div class="text-center mt-3">
-            <a href="officers.html" class="btn btn-outline-primary">View All Officers</a>
-        </div>
-    </section>
-
-    <!-- Upcoming Events Section -->
-    <section class="bg-light py-5">
-        <div class="container">
+        <!-- Officers Section -->
+        <section class="container py-5">
             <div class="section-title">
-                <h2>Upcoming Events</h2>
+                <h2>Our Leadership</h2>
                 <div class="divider"></div>
-                <p class="text-muted mt-3">Join us in our upcoming activities and programs</p>
+                <p class="text-muted mt-3">Meet the dedicated team leading our organization</p>
             </div>
-            <div class="row" id="eventsContainer">
-                <!-- Events will be loaded here -->
+            <div class="row" id="officersContainer">
+                <div class="col-12 text-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
             </div>
             <div class="text-center mt-3">
-                <a href="events.html" class="btn btn-outline-primary">View All Events</a>
+                <a href="officers.html" class="btn btn-outline-primary">View All Officers</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Recent Accomplishments Section -->
-    <section class="container py-5">
-        <div class="section-title">
-            <h2>Recent Accomplishments</h2>
-            <div class="divider"></div>
-            <p class="text-muted mt-3">Celebrating our milestones and achievements</p>
-        </div>
-        <div class="row" id="accomplishmentsContainer">
-            <!-- Accomplishments will be loaded here -->
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -164,21 +135,170 @@
                     <div class="social-links mt-3" id="socialLinks"></div>
                 </div>
             </div>
-            <hr class="mt-4" style="border-color: #333;">
-            <div class="text-center pt-3">
-                <p class="mb-0" id="copyright"></p>
-            </div>
+            <hr><div class="text-center pt-3"><p class="mb-0" id="copyright"></p></div>
         </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop">
-        <i class="bi bi-arrow-up"></i>
-    </button>
+    <button class="scroll-top" id="scrollTop"><i class="bi bi-arrow-up"></i></button>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
+    <script>
+        // Main function to load and display data
+        async function loadAndDisplayData() {
+            try {
+                // Load settings
+                const settingsResponse = await fetch('data/settings.json');
+                const settings = await settingsResponse.json();
+                
+                // Load officers
+                const officersResponse = await fetch('data/officers.json');
+                const officers = await officersResponse.json();
+                
+                // Load events
+                const eventsResponse = await fetch('data/events.json');
+                const events = await eventsResponse.json();
+                
+                // Load accomplishments
+                const accomplishmentsResponse = await fetch('data/accomplishments.json');
+                const accomplishments = await accomplishmentsResponse.json();
+                
+                console.log('Settings loaded:', settings);
+                console.log('Officers count:', officers.length);
+                
+                // Update site name everywhere
+                if (settings.site_name && settings.site_name !== 'null') {
+                    document.title = settings.site_name;
+                    const siteBrand = document.getElementById('siteBrand');
+                    const footerName = document.getElementById('footerName');
+                    if (siteBrand) siteBrand.textContent = settings.site_name;
+                    if (footerName) footerName.textContent = settings.site_name;
+                    
+                    const heroTitle = document.getElementById('heroTitle');
+                    if (heroTitle) heroTitle.textContent = `Welcome to ${settings.site_name}`;
+                    
+                    const aboutTitle = document.getElementById('aboutTitle');
+                    if (aboutTitle) aboutTitle.textContent = `About ${settings.site_name}`;
+                }
+                
+                // Update stats
+                const upcomingEvents = events.filter(e => e.start_date && new Date(e.start_date) >= new Date());
+                document.getElementById('officerCount').textContent = officers.length;
+                document.getElementById('eventCount').textContent = upcomingEvents.length;
+                document.getElementById('accomplishmentCount').textContent = accomplishments.length;
+                
+                // Update about, mission, vision
+                const aboutText = document.getElementById('aboutText');
+                const missionText = document.getElementById('missionText');
+                const visionText = document.getElementById('visionText');
+                
+                if (aboutText && settings.about_content && settings.about_content !== 'null') {
+                    aboutText.textContent = settings.about_content;
+                }
+                if (missionText && settings.mission && settings.mission !== 'null') {
+                    missionText.textContent = settings.mission;
+                }
+                if (visionText && settings.vision && settings.vision !== 'null') {
+                    visionText.textContent = settings.vision;
+                }
+                
+                // Update officers (show first 4)
+                const officersContainer = document.getElementById('officersContainer');
+                if (officers.length > 0) {
+                    officersContainer.innerHTML = officers.slice(0, 4).map(officer => `
+                        <div class="col-md-3 col-sm-6 mb-4">
+                            <div class="officer-card text-center">
+                                <div class="officer-avatar"><i class="bi bi-person-fill"></i></div>
+                                <h5 class="mt-3">${escapeHtml(officer.full_name)}</h5>
+                                <p class="text-muted small">${escapeHtml(officer.position)}</p>
+                            </div>
+                        </div>
+                    `).join('');
+                } else {
+                    officersContainer.innerHTML = '<div class="col-12 text-center"><p>No officers found.</p></div>';
+                }
+                
+                // Update footer contact info
+                const contactInfo = document.getElementById('contactInfo');
+                if (contactInfo) {
+                    let contactHtml = '';
+                    if (settings.contact_email && settings.contact_email !== 'null') contactHtml += `<li><i class="bi bi-envelope me-2"></i> ${escapeHtml(settings.contact_email)}</li>`;
+                    if (settings.contact_phone && settings.contact_phone !== 'null') contactHtml += `<li><i class="bi bi-telephone me-2"></i> ${escapeHtml(settings.contact_phone)}</li>`;
+                    if (settings.contact_address && settings.contact_address !== 'null') contactHtml += `<li><i class="bi bi-geo-alt me-2"></i> ${escapeHtml(settings.contact_address)}</li>`;
+                    contactInfo.innerHTML = contactHtml || '<li>No contact info available</li>';
+                }
+                
+                // Update social links
+                const socialLinks = document.getElementById('socialLinks');
+                if (socialLinks) {
+                    let socialHtml = '';
+                    if (settings.social_facebook && settings.social_facebook !== 'null') socialHtml += `<a href="${escapeHtml(settings.social_facebook)}" target="_blank"><i class="bi bi-facebook"></i></a>`;
+                    if (settings.social_twitter && settings.social_twitter !== 'null') socialHtml += `<a href="${escapeHtml(settings.social_twitter)}" target="_blank"><i class="bi bi-twitter-x"></i></a>`;
+                    if (settings.social_instagram && settings.social_instagram !== 'null') socialHtml += `<a href="${escapeHtml(settings.social_instagram)}" target="_blank"><i class="bi bi-instagram"></i></a>`;
+                    socialLinks.innerHTML = socialHtml;
+                }
+                
+                // Update copyright
+                const copyright = document.getElementById('copyright');
+                if (copyright) {
+                    copyright.innerHTML = `&copy; ${new Date().getFullYear()} ${settings.site_name || 'Our Organization'}. All rights reserved.`;
+                }
+                
+                // Initialize scroll animation
+                initScrollAnimation();
+                
+            } catch (error) {
+                console.error('Error loading data:', error);
+                const officersContainer = document.getElementById('officersContainer');
+                if (officersContainer) {
+                    officersContainer.innerHTML = '<div class="col-12 text-center"><p class="text-danger">Error loading data. Please refresh the page.</p></div>';
+                }
+            }
+        }
+        
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        function initNavbar() {
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                const scrollTop = document.getElementById('scrollTop');
+                if (window.scrollY > 50) {
+                    navbar?.classList.add('scrolled');
+                    scrollTop?.classList.add('show');
+                } else {
+                    navbar?.classList.remove('scrolled');
+                    scrollTop?.classList.remove('show');
+                }
+            });
+            const scrollTopBtn = document.getElementById('scrollTop');
+            if (scrollTopBtn) {
+                scrollTopBtn.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        }
+        
+        function initScrollAnimation() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+        }
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            loadAndDisplayData();
+            initNavbar();
+        });
+    </script>
 </body>
 </html>
