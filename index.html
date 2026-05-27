@@ -14,14 +14,28 @@
         /* Mobile responsive fixes */
         @media (max-width: 768px) {
             .hero-section {
-                min-height: 50vh;
-                padding: 60px 0;
+                min-height: 60vh;
+                padding: 80px 20px;
             }
             .hero-section h1 {
                 font-size: 1.8rem;
             }
             .hero-section .lead {
                 font-size: 1rem;
+            }
+            /* Fix buttons on mobile - make them visible and stacked */
+            .hero-buttons-container {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 12px !important;
+                margin-top: 20px;
+            }
+            .hero-buttons-container .btn {
+                display: inline-block !important;
+                width: auto !important;
+                min-width: 160px !important;
+                margin: 0 !important;
             }
             .stats-section .stat-number {
                 font-size: 1.5rem;
@@ -77,6 +91,48 @@
             list-style: none;
             margin-bottom: 8px;
         }
+        
+        /* Hero buttons container */
+        .hero-buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+        
+        .hero-buttons-container .btn-light {
+            background: white;
+            color: #2e7d32;
+            padding: 12px 32px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s;
+            text-decoration: none;
+            border: none;
+        }
+        
+        .hero-buttons-container .btn-outline-light {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .hero-buttons-container .btn-light:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .hero-buttons-container .btn-outline-light:hover {
+            background: white;
+            color: #2e7d32;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
@@ -100,11 +156,12 @@
     </nav>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero-section">
             <div class="container text-center">
                 <h1 class="display-3 fw-bold mb-4" id="heroTitle">Welcome to Our Organization</h1>
                 <p class="lead mb-4" id="heroText">Building tomorrow's leaders today through service, leadership development, and community excellence.</p>
-                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <div class="hero-buttons-container">
                     <a href="about.html" class="btn btn-light btn-lg">Learn More</a>
                     <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Us</a>
                 </div>
@@ -224,33 +281,19 @@
     <script>
         async function loadData() {
             try {
-                // Load settings
                 const settingsRes = await fetch('data/settings.json');
                 const settings = await settingsRes.json();
-                
-                // Load officers
                 const officersRes = await fetch('data/officers.json');
                 const officers = await officersRes.json();
-                
-                // Load events
                 const eventsRes = await fetch('data/events.json');
                 const events = await eventsRes.json();
-                
-                // Load accomplishments
                 const accRes = await fetch('data/accomplishments.json');
                 const accomplishments = await accRes.json();
-                
                 return { settings, officers, events, accomplishments };
             } catch (error) {
                 console.error('Error loading data:', error);
                 return { settings: {}, officers: [], events: [], accomplishments: [] };
             }
-        }
-        
-        function formatDate(dateString) {
-            if (!dateString) return 'TBA';
-            const date = new Date(dateString);
-            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
         }
         
         function escapeHtml(text) {
@@ -263,19 +306,16 @@
         async function initHomepage() {
             const { settings, officers, events, accomplishments } = await loadData();
             
-            // Update site name
             if (settings.site_name && settings.site_name !== 'null') {
                 document.title = settings.site_name;
                 const siteBrand = document.getElementById('siteBrand');
                 const footerName = document.getElementById('footerName');
                 if (siteBrand) siteBrand.textContent = settings.site_name;
                 if (footerName) footerName.textContent = settings.site_name;
-                
                 const heroTitle = document.getElementById('heroTitle');
                 if (heroTitle) heroTitle.textContent = `Welcome to ${settings.site_name}`;
             }
             
-            // Update stats
             const today = new Date();
             const upcomingEvents = events.filter(e => e.start_date && new Date(e.start_date) >= today);
             
@@ -283,13 +323,11 @@
             document.getElementById('eventCount').textContent = upcomingEvents.length;
             document.getElementById('accomplishmentCount').textContent = accomplishments.length;
             
-            // Calculate years active (founded year, default to 2019 if not set)
             const foundedYear = settings.founded_year || 2019;
             const currentYear = new Date().getFullYear();
             const yearsActive = currentYear - foundedYear;
             document.getElementById('yearsActive').textContent = yearsActive;
             
-            // Update about section
             const aboutText = document.getElementById('aboutText');
             const missionText = document.getElementById('missionText');
             const visionText = document.getElementById('visionText');
@@ -298,7 +336,6 @@
             if (missionText) missionText.textContent = settings.mission || 'To empower the youth through leadership development...';
             if (visionText) visionText.textContent = settings.vision || 'A community where young people are empowered...';
             
-            // Update officers (show first 4)
             const officersContainer = document.getElementById('officersContainer');
             if (officers.length > 0) {
                 officersContainer.innerHTML = officers.slice(0, 4).map(officer => `
@@ -316,7 +353,6 @@
                 officersContainer.innerHTML = '<div class="col-12 text-center"><p>No officers found.</p></div>';
             }
             
-            // Update footer contact
             const contactInfo = document.getElementById('contactInfo');
             if (contactInfo) {
                 let html = '';
@@ -326,7 +362,6 @@
                 contactInfo.innerHTML = html || '<li>No contact info available</li>';
             }
             
-            // Update social links
             const socialLinks = document.getElementById('socialLinks');
             if (socialLinks) {
                 let html = '';
@@ -336,14 +371,12 @@
                 socialLinks.innerHTML = html;
             }
             
-            // Update copyright
             const copyright = document.getElementById('copyright');
             if (copyright) {
                 copyright.innerHTML = `&copy; ${new Date().getFullYear()} ${settings.site_name || 'Our Organization'}. All rights reserved.`;
             }
         }
         
-        // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
             const scrollTop = document.getElementById('scrollTop');
