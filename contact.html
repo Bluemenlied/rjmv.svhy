@@ -44,9 +44,11 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin: 0 5px;
+            margin: 0 8px;
             transition: all 0.3s;
             color: var(--primary);
+            text-decoration: none;
+            font-size: 1.2rem;
         }
         .social-circle:hover {
             background: var(--primary);
@@ -185,7 +187,6 @@
                 const settingsRes = await fetch('data/settings.json');
                 const settings = await settingsRes.json();
                 
-                // Update site name
                 if (settings.site_name && settings.site_name !== 'null') {
                     document.title = `${settings.site_name} - Contact Us`;
                     const siteBrand = document.getElementById('siteBrand');
@@ -194,7 +195,6 @@
                     if (footerName) footerName.textContent = settings.site_name;
                 }
                 
-                // Update contact info
                 const contactEmail = document.getElementById('contactEmail');
                 const contactPhone = document.getElementById('contactPhone');
                 const contactAddress = document.getElementById('contactAddress');
@@ -215,23 +215,22 @@
                         : 'Not available';
                 }
                 
-                // Update social links
+                // Social links - using X (Twitter) icon
                 const socialLinks = document.getElementById('socialLinks');
                 if (socialLinks) {
                     let html = '';
                     if (settings.social_facebook && settings.social_facebook !== 'null') {
-                        html += `<a href="${escapeHtml(settings.social_facebook)}" target="_blank" class="social-circle"><i class="bi bi-facebook"></i></a>`;
+                        html += `<a href="${escapeHtml(settings.social_facebook)}" target="_blank" class="social-circle" title="Facebook"><i class="bi bi-facebook"></i></a>`;
                     }
                     if (settings.social_twitter && settings.social_twitter !== 'null') {
-                        html += `<a href="${escapeHtml(settings.social_twitter)}" target="_blank" class="social-circle"><i class="bi bi-twitter-x"></i></a>`;
+                        html += `<a href="${escapeHtml(settings.social_twitter)}" target="_blank" class="social-circle" title="X (formerly Twitter)"><i class="bi bi-twitter-x"></i></a>`;
                     }
                     if (settings.social_instagram && settings.social_instagram !== 'null') {
-                        html += `<a href="${escapeHtml(settings.social_instagram)}" target="_blank" class="social-circle"><i class="bi bi-instagram"></i></a>`;
+                        html += `<a href="${escapeHtml(settings.social_instagram)}" target="_blank" class="social-circle" title="Instagram"><i class="bi bi-instagram"></i></a>`;
                     }
                     socialLinks.innerHTML = html || '<p class="text-muted">No social media links available</p>';
                 }
                 
-                // Update footer
                 const footerContactInfo = document.getElementById('footerContactInfo');
                 if (footerContactInfo) {
                     let html = '';
@@ -241,7 +240,6 @@
                     footerContactInfo.innerHTML = html || '<li>No contact info available</li>';
                 }
                 
-                // Update copyright
                 const copyright = document.getElementById('copyright');
                 if (copyright) {
                     copyright.innerHTML = `&copy; ${new Date().getFullYear()} ${settings.site_name || 'Our Organization'}. All rights reserved.`;
