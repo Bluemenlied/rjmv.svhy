@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title id="siteTitle">Contact Us - Youth Organization</title>
     <meta name="description" content="Get in touch with our organization">
     
@@ -10,6 +10,63 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        .contact-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(46,125,50,0.1), rgba(46,125,50,0.05));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        .contact-icon i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+        .social-circle {
+            width: 45px;
+            height: 45px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5px;
+            transition: all 0.3s;
+            color: var(--primary);
+        }
+        .social-circle:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        @media (max-width: 768px) {
+            .contact-card {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            .contact-icon {
+                width: 50px;
+                height: 50px;
+            }
+            .contact-icon i {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -33,61 +90,54 @@
 
     <main>
         <section class="bg-light py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 mx-auto text-center">
-                        <h1 class="display-4 fw-bold mb-3">Contact Us</h1>
-                        <p class="lead text-muted">We'd love to hear from you. Get in touch with us!</p>
-                    </div>
-                </div>
+            <div class="container text-center">
+                <h1 class="display-4 fw-bold mb-3">Contact Us</h1>
+                <p class="lead text-muted">We'd love to hear from you. Get in touch with us!</p>
             </div>
         </section>
 
         <section class="container py-5">
             <div class="row g-4">
-                <div class="col-lg-8 mx-auto">
-                    <div class="card shadow-sm border-0">
-                        <div class="card-body p-5">
-                            <div class="row g-4">
-                                <div class="col-md-4 text-center">
-                                    <div class="contact-icon-wrapper mb-3">
-                                        <div class="contact-icon">
-                                            <i class="bi bi-envelope-fill"></i>
-                                        </div>
-                                    </div>
-                                    <h5>Email Us</h5>
-                                    <p id="contactEmail" class="mb-0">Loading...</p>
-                                </div>
-                                <div class="col-md-4 text-center">
-                                    <div class="contact-icon-wrapper mb-3">
-                                        <div class="contact-icon">
-                                            <i class="bi bi-telephone-fill"></i>
-                                        </div>
-                                    </div>
-                                    <h5>Call Us</h5>
-                                    <p id="contactPhone" class="mb-0">Loading...</p>
-                                </div>
-                                <div class="col-md-4 text-center">
-                                    <div class="contact-icon-wrapper mb-3">
-                                        <div class="contact-icon">
-                                            <i class="bi bi-geo-alt-fill"></i>
-                                        </div>
-                                    </div>
-                                    <h5>Visit Us</h5>
-                                    <p id="contactAddress" class="mb-0">Loading...</p>
-                                </div>
-                            </div>
+                <div class="col-md-4">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope-fill"></i>
                         </div>
+                        <h5>Email Us</h5>
+                        <p id="contactEmail" class="mb-0">Loading...</p>
+                        <small class="text-muted">We'll respond within 24 hours</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <h5>Call Us</h5>
+                        <p id="contactPhone" class="mb-0">Loading...</p>
+                        <small class="text-muted">Mon-Fri, 9AM-5PM</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <h5>Visit Us</h5>
+                        <p id="contactAddress" class="mb-0">Loading...</p>
+                        <small class="text-muted">Get directions</small>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section class="container py-4">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h3 class="mb-4">Follow Us</h3>
-                    <div class="social-links-large" id="socialLinks"></div>
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <h4 class="mb-4">Follow Us on Social Media</h4>
+                    <div id="socialLinks">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -95,12 +145,12 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
+            <div class="row g-4">
+                <div class="col-md-4">
                     <h5 id="footerName">Our Organization</h5>
                     <p>Building tomorrow's leaders today through service, leadership development, and community excellence.</p>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="index.html">Home</a></li>
@@ -111,15 +161,17 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4">
                     <h5>Contact Us</h5>
                     <ul class="list-unstyled" id="footerContactInfo">
                         <li><i class="bi bi-envelope me-2"></i> Loading...</li>
                     </ul>
-                    <div class="social-links mt-3" id="footerSocialLinks"></div>
                 </div>
             </div>
-            <hr><div class="text-center pt-3"><p class="mb-0" id="copyright"></p></div>
+            <hr class="mt-4">
+            <div class="text-center pt-3">
+                <p class="mb-0" id="copyright"></p>
+            </div>
         </div>
     </footer>
 
@@ -127,63 +179,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     
-    <style>
-        .contact-icon-wrapper {
-            display: flex;
-            justify-content: center;
-        }
-        .contact-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, rgba(46, 125, 50, 0.1), rgba(46, 125, 50, 0.05));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-        .contact-icon i {
-            font-size: 2rem;
-            color: var(--primary);
-        }
-        .contact-icon-wrapper:hover .contact-icon {
-            transform: scale(1.1);
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-        }
-        .contact-icon-wrapper:hover .contact-icon i {
-            color: white;
-        }
-        .social-links-large a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background: #f8f9fa;
-            border-radius: 50%;
-            margin: 0 10px;
-            transition: all 0.3s;
-            color: var(--primary);
-            text-decoration: none;
-            font-size: 1.5rem;
-        }
-        .social-links-large a:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-3px);
-        }
-        [data-theme="dark"] .social-links-large a {
-            background: #2d2d2d;
-        }
-    </style>
-    
     <script>
         async function loadContactPage() {
             try {
-                const settingsResponse = await fetch('data/settings.json');
-                const settings = await settingsResponse.json();
-                
-                console.log('Contact page - Settings loaded:', settings);
+                const settingsRes = await fetch('data/settings.json');
+                const settings = await settingsRes.json();
                 
                 // Update site name
                 if (settings.site_name && settings.site_name !== 'null') {
@@ -194,34 +194,25 @@
                     if (footerName) footerName.textContent = settings.site_name;
                 }
                 
-                // Update contact email
+                // Update contact info
                 const contactEmail = document.getElementById('contactEmail');
-                if (contactEmail) {
-                    if (settings.contact_email && settings.contact_email !== 'null') {
-                        contactEmail.innerHTML = `<a href="mailto:${escapeHtml(settings.contact_email)}" class="text-decoration-none">${escapeHtml(settings.contact_email)}</a>`;
-                    } else {
-                        contactEmail.innerHTML = 'Not available';
-                    }
-                }
-                
-                // Update contact phone
                 const contactPhone = document.getElementById('contactPhone');
-                if (contactPhone) {
-                    if (settings.contact_phone && settings.contact_phone !== 'null') {
-                        contactPhone.innerHTML = `<a href="tel:${escapeHtml(settings.contact_phone)}" class="text-decoration-none">${escapeHtml(settings.contact_phone)}</a>`;
-                    } else {
-                        contactPhone.innerHTML = 'Not available';
-                    }
-                }
-                
-                // Update contact address
                 const contactAddress = document.getElementById('contactAddress');
+                
+                if (contactEmail) {
+                    contactEmail.innerHTML = settings.contact_email && settings.contact_email !== 'null' 
+                        ? `<a href="mailto:${escapeHtml(settings.contact_email)}" class="text-decoration-none">${escapeHtml(settings.contact_email)}</a>`
+                        : 'Not available';
+                }
+                if (contactPhone) {
+                    contactPhone.innerHTML = settings.contact_phone && settings.contact_phone !== 'null'
+                        ? `<a href="tel:${escapeHtml(settings.contact_phone)}" class="text-decoration-none">${escapeHtml(settings.contact_phone)}</a>`
+                        : 'Not available';
+                }
                 if (contactAddress) {
-                    if (settings.contact_address && settings.contact_address !== 'null') {
-                        contactAddress.innerHTML = escapeHtml(settings.contact_address);
-                    } else {
-                        contactAddress.innerHTML = 'Not available';
-                    }
+                    contactAddress.innerHTML = settings.contact_address && settings.contact_address !== 'null'
+                        ? escapeHtml(settings.contact_address)
+                        : 'Not available';
                 }
                 
                 // Update social links
@@ -229,35 +220,25 @@
                 if (socialLinks) {
                     let html = '';
                     if (settings.social_facebook && settings.social_facebook !== 'null') {
-                        html += `<a href="${escapeHtml(settings.social_facebook)}" target="_blank"><i class="bi bi-facebook"></i></a>`;
+                        html += `<a href="${escapeHtml(settings.social_facebook)}" target="_blank" class="social-circle"><i class="bi bi-facebook"></i></a>`;
                     }
                     if (settings.social_twitter && settings.social_twitter !== 'null') {
-                        html += `<a href="${escapeHtml(settings.social_twitter)}" target="_blank"><i class="bi bi-twitter-x"></i></a>`;
+                        html += `<a href="${escapeHtml(settings.social_twitter)}" target="_blank" class="social-circle"><i class="bi bi-twitter-x"></i></a>`;
                     }
                     if (settings.social_instagram && settings.social_instagram !== 'null') {
-                        html += `<a href="${escapeHtml(settings.social_instagram)}" target="_blank"><i class="bi bi-instagram"></i></a>`;
+                        html += `<a href="${escapeHtml(settings.social_instagram)}" target="_blank" class="social-circle"><i class="bi bi-instagram"></i></a>`;
                     }
                     socialLinks.innerHTML = html || '<p class="text-muted">No social media links available</p>';
                 }
                 
-                // Update footer contact info
+                // Update footer
                 const footerContactInfo = document.getElementById('footerContactInfo');
                 if (footerContactInfo) {
-                    let footerHtml = '';
-                    if (settings.contact_email && settings.contact_email !== 'null') footerHtml += `<li><i class="bi bi-envelope me-2"></i> ${escapeHtml(settings.contact_email)}</li>`;
-                    if (settings.contact_phone && settings.contact_phone !== 'null') footerHtml += `<li><i class="bi bi-telephone me-2"></i> ${escapeHtml(settings.contact_phone)}</li>`;
-                    if (settings.contact_address && settings.contact_address !== 'null') footerHtml += `<li><i class="bi bi-geo-alt me-2"></i> ${escapeHtml(settings.contact_address)}</li>`;
-                    footerContactInfo.innerHTML = footerHtml || '<li>No contact info available</li>';
-                }
-                
-                // Update footer social links
-                const footerSocialLinks = document.getElementById('footerSocialLinks');
-                if (footerSocialLinks) {
-                    let footerHtml = '';
-                    if (settings.social_facebook && settings.social_facebook !== 'null') footerHtml += `<a href="${escapeHtml(settings.social_facebook)}" target="_blank"><i class="bi bi-facebook"></i></a>`;
-                    if (settings.social_twitter && settings.social_twitter !== 'null') footerHtml += `<a href="${escapeHtml(settings.social_twitter)}" target="_blank"><i class="bi bi-twitter-x"></i></a>`;
-                    if (settings.social_instagram && settings.social_instagram !== 'null') footerHtml += `<a href="${escapeHtml(settings.social_instagram)}" target="_blank"><i class="bi bi-instagram"></i></a>`;
-                    footerSocialLinks.innerHTML = footerHtml;
+                    let html = '';
+                    if (settings.contact_email && settings.contact_email !== 'null') html += `<li><i class="bi bi-envelope me-2"></i> ${escapeHtml(settings.contact_email)}</li>`;
+                    if (settings.contact_phone && settings.contact_phone !== 'null') html += `<li><i class="bi bi-telephone me-2"></i> ${escapeHtml(settings.contact_phone)}</li>`;
+                    if (settings.contact_address && settings.contact_address !== 'null') html += `<li><i class="bi bi-geo-alt me-2"></i> ${escapeHtml(settings.contact_address)}</li>`;
+                    footerContactInfo.innerHTML = html || '<li>No contact info available</li>';
                 }
                 
                 // Update copyright
@@ -265,12 +246,8 @@
                 if (copyright) {
                     copyright.innerHTML = `&copy; ${new Date().getFullYear()} ${settings.site_name || 'Our Organization'}. All rights reserved.`;
                 }
-                
             } catch (error) {
                 console.error('Error loading contact page:', error);
-                // Show fallback content
-                const contactEmail = document.getElementById('contactEmail');
-                if (contactEmail) contactEmail.innerHTML = 'info@organization.org';
             }
         }
         
@@ -281,30 +258,22 @@
             return div.innerHTML;
         }
         
-        function initNavbar() {
-            window.addEventListener('scroll', function() {
-                const navbar = document.querySelector('.navbar');
-                const scrollTop = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.getElementById('scrollTop');
+            if (scrollTop) {
                 if (window.scrollY > 50) {
-                    navbar?.classList.add('scrolled');
-                    scrollTop?.classList.add('show');
+                    scrollTop.classList.add('show');
                 } else {
-                    navbar?.classList.remove('scrolled');
-                    scrollTop?.classList.remove('show');
+                    scrollTop.classList.remove('show');
                 }
-            });
-            const scrollTopBtn = document.getElementById('scrollTop');
-            if (scrollTopBtn) {
-                scrollTopBtn.addEventListener('click', function() {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
             }
-        }
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            loadContactPage();
-            initNavbar();
         });
+        
+        document.getElementById('scrollTop')?.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        document.addEventListener('DOMContentLoaded', loadContactPage);
     </script>
 </body>
 </html>
