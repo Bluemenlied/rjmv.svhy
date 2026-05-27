@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "position": "President",
+    "full_name": "Juan Dela Cruz",
+    "term_start": "2024-01-01",
+    "term_end": "2025-12-31",
+    "order_rank": 1,
+    "email": "president@youth.org",
+    "contact": "9123456789"
+  },
+  {
+    "id": 2,
+    "position": "Vice President",
+    "full_name": "Maria Santos",
+    "term_start": "2024-01-01",
+    "term_end": "2025-12-31",
+    "order_rank": 2,
+    "email": "vp@youth.org",
+    "contact": "9123456788"
+  },
+  {
+    "id": 3,
+    "position": "Secretary",
+    "full_name": "Irish Joyce B. Halili",
+    "term_start": "2024-01-01",
+    "term_end": "2025-12-31",
+    "order_rank": 3,
+    "email": "secretary@youth.org",
+    "contact": "9123456787"
+  },
+  {
+    "id": 4,
+    "position": "Treasurer",
+    "full_name": "Jane Smith",
+    "term_start": "2024-01-01",
+    "term_end": "2025-12-31",
+    "order_rank": 4,
+    "email": "treasurer@youth.org",
+    "contact": "9123456786"
+  },
+  {
+    "id": 5,
+    "position": "Auditor",
+    "full_name": "Pedro Penduko",
+    "term_start": "2024-01-01",
+    "term_end": "2025-12-31",
+    "order_rank": 5,
+    "email": "auditor@youth.org",
+    "contact": "9123456785"
+  },
+  {
+    "id": 6,
+    "position": "PIO",
+    "full_name": "Maria Clara",
+    "term_start": "2024-01-01",
+    "term_end": "2025-12-31",
+    "order_rank": 6,
+    "email": "pio@youth.org",
+    "contact": "9123456784"
+  },
+  {
+    "id": 7,
+    "position": "Sergeant at Arms",
+    "full_name": "Jose Rizal",
+    "term_start": "2024-01-01",
+    "term_end": "2025-12-31",
+    "order_rank": 7,
+    "email": "saa@youth.org",
+    "contact": "9123456783"
+  },
+  {
+    "id": 8,
+    "position": "Board Member 1",
+    "full_name": "Andres Bonifacio",
+    "term_start": "2024-01-01",
+    "term_end": "2025-12-31",
+    "order_rank": 8,
+    "email": "andres.b@youth.org",
+    "contact": "9123456782"
+  },
+  {
+    "id": 9,
+    "position": "Board Member 2",
+    "full_name": "Gabriela Silang",
+    "term_start": "2024-01-01",
+    "term_end": "2025-12-31",
+    "order_rank": 9,
+    "email": "gabriela.s@youth.org",
+    "contact": "9123456781"
+  },
+  {
+    "id": 10,
+    "position": "Board Member 3",
+    "full_name": "Lapu-Lapu",
+    "term_start": "2024-01-01",
+    "term_end": "2025-12-31",
+    "order_rank": 10,
+    "email": "lapu.lapu@youth.org",
+    "contact": "9123456780"
+  },
+  {
+    "id": 11,
+    "position": "Board Member 4",
+    "full_name": "Kenneth Villanueva",
+    "term_start": "2025-01-01",
+    "term_end": "2025-12-31",
+    "order_rank": 11,
+    "email": "board5@youthorg.ph",
+    "contact": "9170000011"
+  },
+  {
+    "id": 12,
+    "position": "Board Member 5",
+    "full_name": "Bea Nicole Hernandez",
+    "term_start": "2025-01-01",
+    "term_end": "2025-12-31",
+    "order_rank": 12,
+    "email": "board6@youthorg.ph",
+    "contact": "9170000012"
+  },
+  {
+    "id": 13,
+    "position": "Board Member 6",
+    "full_name": "Rafael Jhon",
+    "term_start": "2025-01-01",
+    "term_end": "2025-12-31",
+    "order_rank": 13,
+    "email": "valenzuela.rafaeljhon.0125@gmail.com",
+    "contact": "9170000013"
+  },
+  {
+    "id": 14,
+    "position": "Board Member 7",
+    "full_name": "Cristine Joy Valenzuela",
+    "term_start": "2024-01-01",
+    "term_end": "2025-12-01",
+    "order_rank": 14,
+    "email": "cristine_valenzuela@gmail.com",
+    "contact": "9919282633"
+  }
+]
